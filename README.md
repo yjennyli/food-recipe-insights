@@ -161,12 +161,49 @@ We aim to predict recipe ratings on a scale of 1-5 based on recipe characteristi
      * Aligns with our goal of accurate numerical predictions
 
 ## Baseline Model
-Our initial model uses basic recipe characteristics:
-- Features: 
-- Model type: Random Forest Regressor
-- Performance metrics:
-  - RMSE: 
-  - R²: 
+
+### Model Description
+We developed a Random Forest Regression model to predict recipe ratings. Our model processes both quantitative and nominal features through a preprocessing pipeline that includes scaling and encoding steps.
+
+#### Feature Composition
+- **Quantitative Features (2):**
+  - Number of ingredients (`n_ingredients`)
+  - Cooking time in minutes (`minutes`)
+- **Nominal Features (1):**
+  - Cooking time category (`cooking_time_category`)
+    - Encoded categories: very_quick, quick, medium, very_long
+
+#### Data Processing
+- **Numeric Features:**
+  - Applied median imputation for missing values
+  - Standardized using StandardScaler
+- **Categorical Features:**
+  - Used OneHotEncoder with drop='first'
+  - Imputed missing values with 'medium' category
+
+### Model Performance
+Our Random Forest Regressor achieved the following metrics:
+- **Test RMSE:** 0.6482 (average prediction error in rating points)
+- **Train RMSE:** 0.6263
+- **Test R²:** -0.0392
+- **Train R²:** 0.0481
+
+### Feature Importance Analysis
+1. Cooking time (minutes): 58.25%
+2. Number of ingredients: 40.71%
+3. Cooking time categories: ~1% combined
+
+### Model Assessment
+The current model's performance indicates room for improvement:
+- The negative R² score suggests the model performs worse than a horizontal line
+- Similar train and test RMSE values indicate consistent but suboptimal performance
+- Feature importance analysis reveals that temporal features (cooking time) have the strongest predictive power
+
+This baseline model provides valuable insights but needs enhancement through:
+- Additional feature engineering
+- Incorporation of nutritional information
+- Exploration of interaction terms
+- Advanced algorithm tuning
 
 
 
