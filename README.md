@@ -60,7 +60,7 @@ Our analysis focuses on these key features:
 - Relationship between ingredients and ratings
 - Nutritional content patterns
 
-[Embed your second plotly visualization here]
+
 
 ## Framing a Prediction Problem
 We aim to predict recipe ratings based on:
@@ -71,13 +71,13 @@ We aim to predict recipe ratings based on:
 
 ## Baseline Model
 Our initial model uses basic recipe characteristics:
-- Features: [list your features]
+- Features: 
 - Model type: Random Forest Regressor
 - Performance metrics:
-  - RMSE: [your value]
-  - R²: [your value]
+  - RMSE: 
+  - R²: 
 
-[Embed your feature importance plot here]
+
 
 ## Final Model
 Our improved model incorporates engineered features:
@@ -90,4 +90,4 @@ Performance comparison:
 - Final RMSE: 0.6360
 - Improvement: 1.9%
 
-[Embed your final model visualization here]
+
