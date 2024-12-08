@@ -121,12 +121,44 @@ We chose not to impute missing values in our analysis because:
 
 
 
-## Framing a Prediction Problem
-We aim to predict recipe ratings based on:
-- Number of ingredients
-- Cooking time
-- Recipe complexity
-- Nutritional metrics
+## Prediction Problem
+
+### Problem Definition
+We aim to predict recipe ratings on a scale of 1-5 based on recipe characteristics that are available when a recipe is first posted. This is framed as a **regression problem** because:
+- The target variable (avg_rating) is continuous on a 1-5 scale
+- We need to predict exact rating values rather than categories
+- The ratings represent a meaningful numeric scale of user satisfaction
+
+### Model Components
+1. **Target Variable**: `avg_rating`
+   - Scale: 1-5 stars
+   - Represents average user satisfaction with recipe
+   - Dataset size: 83,782 recipes with ratings
+
+2. **Selected Features**
+   - Recipe Characteristics:
+     * `n_ingredients`: Number of ingredients
+     * `minutes`: Cooking time
+     * `n_steps`: Number of preparation steps
+   - Nutritional Information:
+     * `calories`: Total calories
+     * `protein_pdv`: Protein (% daily value)
+     * `total_fat_pdv`: Fat (% daily value)
+     * `sodium_pdv`: Sodium (% daily value)
+   - Categorical Features:
+     * `cooking_time_category`: Duration category
+
+3. **Feature Selection Rationale**
+   We carefully selected features that would be available at the "time of prediction" (when a recipe is first posted). Specifically excluded:
+   - `review_count`: Not available for new recipes
+   - User-generated tags: May not be present initially
+   - Submission date: To avoid temporal bias
+
+4. **Evaluation Metric**: Mean Squared Error (MSE)
+   - Chosen because it:
+     * Penalizes larger prediction errors more heavily
+     * Provides interpretable results in the same units as ratings
+     * Aligns with our goal of accurate numerical predictions
 
 ## Baseline Model
 Our initial model uses basic recipe characteristics:
