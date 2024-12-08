@@ -14,6 +14,12 @@ This analysis investigates factors that influence recipe ratings on a popular co
 - Time period covered: [your range]
 
 [Embed your first plotly visualization here using iframe]
+<iframe
+  src="assets/calories_by_category.html"
+  width="800"
+  height="500"
+  frameborder="0"
+></iframe>
 
 ### Key Findings from EDA
 - Distribution of cooking times
