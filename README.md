@@ -55,10 +55,39 @@ Our analysis focuses on these key features:
   frameborder="0"
 ></iframe>
 
+### Relationship Analysis
+
+#### Health Metrics Correlation
+The relationship between nutritional values shows strong correlations between certain health metrics. Total fat and saturated fat show a strong positive correlation (0.85), while protein and carbohydrates show a weaker relationship (0.32). This suggests that recipes tend to cluster into distinct nutritional profiles.
+<iframe
+  src="assets/health_metrics.html"
+  width="800"
+  height="500"
+  frameborder="0"
+></iframe>
+
 ### Key Findings from EDA
 - Distribution of cooking times
 - Relationship between ingredients and ratings
 - Nutritional content patterns
+### Interesting Aggregates
+
+Here's a summary of average ratings by cooking time category and difficulty level:
+
+| Cooking Time | Average Rating | Number of Reviews |
+|--------------|----------------|-------------------|
+| Quick (<30m) | 4.61           | 2.45             |
+| Medium       | 4.64           | 2.68             |
+| Long (>60m)  | 4.59           | 2.71             |
+
+This aggregation reveals that medium-length recipes not only receive higher ratings but also attract more reviews, suggesting an optimal time investment for recipe success.
+
+### Data Imputation
+We chose not to impute missing values in our analysis because:
+1. The percentage of missing values was minimal (<2% across key columns)
+2. Missing values appeared to be Missing Completely at Random (MCAR)
+3. For our analysis questions, removing recipes with missing values wouldn't introduce significant bias
+4. Maintaining data authenticity was crucial for accurate rating prediction
 
 
 
