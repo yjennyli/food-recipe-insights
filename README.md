@@ -259,11 +259,8 @@ The final model showed improvements over the baseline:
 
 The improvements, while modest in RMSE, show significant gain in R² score, suggesting our engineered features better capture the factors that influence recipe ratings. The dominance of nutritional and complexity metrics in feature importance rankings validates our feature engineering approach.
 
-*Note: All features used are available at recipe creation time, ensuring o
+*Note: All features used are available at recipe creation time, ensuring our model can make predictions for new recipes before they receive any ratings.*
 
-Performance comparison:
-- Baseline RMSE: 0.6482
-- Final RMSE: 0.6360
-- Improvement: 1.9%
+
 
 
