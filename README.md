@@ -74,6 +74,7 @@ The relationship between nutritional values shows strong correlations between ce
 ### Interesting Aggregates
 
 #### Recipe Ratings by Cooking Time
+
 | Cooking Time Category | Average Rating | Recipe Count | Average Minutes |
 |----------------------|----------------|--------------|-----------------|
 | Very Quick (<15m)    | 4.67           | 16,303      | 9.33           |
@@ -83,6 +84,7 @@ The relationship between nutritional values shows strong correlations between ce
 | Very Long (>120m)    | 4.59           | 8,344       | 779.34         |
 
 #### Recipe Complexity Analysis
+
 | Cooking Time Category | Avg Ingredients | Avg Steps | Avg Calories |
 |----------------------|-----------------|-----------|--------------|
 | Very Quick (<15m)    | 6.48           | 5.55      | 313.49       |
@@ -92,6 +94,7 @@ The relationship between nutritional values shows strong correlations between ce
 | Very Long (>120m)    | 10.19          | 12.31     | 553.61       |
 
 #### Missing Value Analysis
+
 | Column               | Missing Count | Missing Percentage |
 |---------------------|---------------|-------------------|
 | name                | 1             | 0.00%             |
@@ -100,13 +103,15 @@ The relationship between nutritional values shows strong correlations between ce
 | cooking_time_category| 1             | 0.00%             |
 | time_category       | 1             | 0.00%             |
 
-*Note: Only columns with missing values are shown. All other columns have complete data.*
+- *Note: Only columns with missing values are shown. All other columns have complete data.*
 
 Key insights from this data:
 - Very quick recipes (<15 minutes) have the highest average rating (4.67)
 - Longer cooking times correlate with more complex recipes (more ingredients and steps)
 - Missing data is minimal, with only 3.11% missing ratings being the highest percentage
 - Recipe complexity generally increases with cooking time, but plateaus for very long recipes
+
+  
 ### Data Imputation
 We chose not to impute missing values in our analysis because:
 1. The percentage of missing values was minimal (<2% across key columns)
