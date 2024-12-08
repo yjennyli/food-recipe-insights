@@ -209,8 +209,6 @@ This baseline model provides valuable insights but needs enhancement through:
 
 ## Final Model
 
-markdownCopy## Final Model Development
-
 ### Feature Engineering
 We introduced several carefully engineered features designed to capture key aspects of recipes that could influence ratings:
 
