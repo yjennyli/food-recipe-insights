@@ -70,18 +70,43 @@ The relationship between nutritional values shows strong correlations between ce
 - Distribution of cooking times
 - Relationship between ingredients and ratings
 - Nutritional content patterns
+
 ### Interesting Aggregates
 
-Here's a summary of average ratings by cooking time category and difficulty level:
+#### Recipe Ratings by Cooking Time
+| Cooking Time Category | Average Rating | Recipe Count | Average Minutes |
+|----------------------|----------------|--------------|-----------------|
+| Very Quick (<15m)    | 4.67           | 16,303      | 9.33           |
+| Quick (15-30m)       | 4.62           | 20,115      | 24.87          |
+| Medium (30-60m)      | 4.61           | 24,570      | 45.68          |
+| Long (60-120m)       | 4.63           | 11,840      | 81.71          |
+| Very Long (>120m)    | 4.59           | 8,344       | 779.34         |
 
-| Cooking Time | Average Rating | Number of Reviews |
-|--------------|----------------|-------------------|
-| Quick (<30m) | 4.61           | 2.45             |
-| Medium       | 4.64           | 2.68             |
-| Long (>60m)  | 4.59           | 2.71             |
+#### Recipe Complexity Analysis
+| Cooking Time Category | Avg Ingredients | Avg Steps | Avg Calories |
+|----------------------|-----------------|-----------|--------------|
+| Very Quick (<15m)    | 6.48           | 5.55      | 313.49       |
+| Quick (15-30m)       | 8.88           | 9.34      | 375.64       |
+| Medium (30-60m)      | 10.09          | 11.49     | 445.81       |
+| Long (60-120m)       | 10.97          | 13.14     | 558.00       |
+| Very Long (>120m)    | 10.19          | 12.31     | 553.61       |
 
-This aggregation reveals that medium-length recipes not only receive higher ratings but also attract more reviews, suggesting an optimal time investment for recipe success.
+#### Missing Value Analysis
+| Column               | Missing Count | Missing Percentage |
+|---------------------|---------------|-------------------|
+| name                | 1             | 0.00%             |
+| description         | 70            | 0.08%             |
+| avg_rating          | 2,609         | 3.11%             |
+| cooking_time_category| 1             | 0.00%             |
+| time_category       | 1             | 0.00%             |
 
+*Note: Only columns with missing values are shown. All other columns have complete data.*
+
+Key insights from this data:
+- Very quick recipes (<15 minutes) have the highest average rating (4.67)
+- Longer cooking times correlate with more complex recipes (more ingredients and steps)
+- Missing data is minimal, with only 3.11% missing ratings being the highest percentage
+- Recipe complexity generally increases with cooking time, but plateaus for very long recipes
 ### Data Imputation
 We chose not to impute missing values in our analysis because:
 1. The percentage of missing values was minimal (<2% across key columns)
