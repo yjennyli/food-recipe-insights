@@ -45,8 +45,8 @@ Our analysis focuses on these key features:
   frameborder="0"
 ></iframe>
 
-#### Cooking Time Impact
-- Analysis of cooking time versus ratings reveals an interesting pattern: recipes with medium cooking times (30-60 minutes) tend to receive higher ratings. Very quick recipes (<15 minutes) and very long recipes (>120 minutes) show slightly lower average ratings, suggesting users prefer recipes that balance convenience with proper cooking time.
+#### Focusing on Cooking Time Impact
+- The relationship between cooking time and ratings shows a remarkably consistent pattern across cooking duration categories. The first figure presents four time divisions (Quick (<30 mins), Medium (30-60 mins), Long (60-120 mins), and Very Long (>120 mins)), while the second figure further refines this by splitting the "Quick" category into "Very Quick" (0-15 mins) and "Quick" (15-30 mins). In both visualizations, the box plots indicate that all cooking time categories achieve similar median ratings, clustering around 4.5-5 stars, with comparable distribution patterns of outliers extending down to lower ratings (1-3 stars). The consistency in ratings persists even with this more granular time categorization, suggesting that cooking duration is not a strong determinant of recipe ratings - users seem to rate recipes favorably regardless of their cooking time, as long as the recipe is well-executed.
 
 <iframe
   src="assets/rate_by_cooktime.html"
